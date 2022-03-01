@@ -3,13 +3,19 @@
   "description": "Webcomponent a-lit-legacy-component following open-wc recommendations",
   "license": "MIT",
   "author": "a-lit-legacy-component",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "exports": {
     ".": "./dist/src/index.js",
     "./a-lit-legacy-component.js": "./dist/src/a-lit-legacy-component.js"
   },
+  "files": [
+    "**/dist*",
+    "!**/stories/*",
+    "!**/demo/*",
+    "!**/*.tsbuildinfo"
+  ],
   "scripts": {
     "analyze": "cem analyze --litelement",
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
